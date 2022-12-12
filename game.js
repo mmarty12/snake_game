@@ -115,11 +115,18 @@ function restartGame() {
   
 }
 
-function drawBerry(){
-
+function drawBerry() {
+    context.beginPath();
+    context.fillStyle = "#0c8a25";
+    context.arc(berry.x + (config.sizeCell / 2 ), berry.y + (config.sizeCell / 2 ), config.sizeBerry, 0, 2 * Math.PI);
+    context.fill();
 }
 
 function randomPositionBerry() {
-
+    berry.x = getRandomInt(0, canvas.width / config.sizeCell) * config.sizeCell;
+    berry.y = getRandomInt(0, canvas.height / config.sizeCell) * config.sizeCell;
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
