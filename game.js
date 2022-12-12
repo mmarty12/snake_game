@@ -26,6 +26,8 @@ let berry = {
 
 let canvas = document.querySelector("#play-field");
 let context = canvas.getContext("2d"); 
+scoreBlock = document.querySelector(".score");
+drawScore();
 
 
 function game() {
@@ -61,7 +63,7 @@ function drawSnake() {
 
         if(element.x === berry.x && element.y === berry.y) {
             snake.maxTail++;
-            ///
+            scoreCount();
             randomPositionBerry();
         }
         for(let i = index + 1; i < snake.tail.length; i++) {
@@ -112,7 +114,13 @@ function addColisions() {
 }
 
 function restartGame() {
-  
+    snake.x = 160;
+    snake.y = 160;
+    snake.speedX = config.sizeCell;
+    snake.speedY = 0;
+    snake.tail = [];
+    snake.maxTail = 3;
+
 }
 
 function drawBerry() {
@@ -129,4 +137,13 @@ function randomPositionBerry() {
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
+}
+
+function scoreCount() {
+    score++;
+    drawScore();
+}
+
+function drawScore() {  
+    scoreBlock.innerHTML = score;
 }
