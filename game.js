@@ -70,6 +70,8 @@ function drawSnake() {
             }
         }
     })
+
+    addColisions();
 }
 
 document.addEventListener('keydown', e => {
@@ -93,9 +95,24 @@ document.addEventListener('keydown', e => {
 }
 })
 
+function addColisions() {
+    if(snake.x < 0){
+        snake.x = canvas.width - config.sizeCell;
+    }
+    else if(snake.x >= canvas.width) {
+        snake.x = 0;
+    }
+
+    if(snake.y < 0){
+        snake.y = canvas.height - config.sizeCell;
+    }
+    else if(snake.y >= canvas.height) {
+        snake.y = 0;
+    }
+}
 
 function restartGame() {
-
+  
 }
 
 function drawBerry(){
