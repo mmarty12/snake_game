@@ -72,6 +72,28 @@ function drawSnake() {
     })
 }
 
+document.addEventListener('keydown', e => {
+ switch(e.code) {
+    case 'KeyW':
+        snake.speedX = 0;
+        snake.speedY = -config.sizeCell;
+        break;
+    case 'KeyA':
+        snake.speedX = -config.sizeCell;
+        snake.speedY = 0; 
+        break;
+    case 'KeyS':
+        snake.speedX = 0;
+        snake.speedY = config.sizeCell;
+        break;
+    case 'KeyD':
+        snake.speedX = config.sizeCell;
+        snake.speedY = 0; 
+        break;
+}
+})
+
+
 function restartGame() {
 
 }
