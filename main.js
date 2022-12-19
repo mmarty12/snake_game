@@ -1,6 +1,6 @@
 import Canvas from './canvas.js';
 import Game from './game.js';
-
+import Score from './score.js';
 import Snake from './snake.js';
 import Berry from './berry.js';
 
@@ -9,7 +9,7 @@ class GamePlay {
     this.canvas = new Canvas(container);
     this.snake = new Snake();
     this.berry = new Berry(this.canvas);
-
+    this.score = new Score('.score', 0);
     new Game(this.update.bind(this), this.draw.bind(this));
   }
 
