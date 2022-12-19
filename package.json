@@ -1,0 +1,19 @@
+{
+  "name": "snake_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmarty12/snake_game.git"
+  },
+  "author": "mmarty12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmarty12/snake_game/issues"
+  },
+  "homepage": "https://github.com/mmarty12/snake_game#readme"
+}
