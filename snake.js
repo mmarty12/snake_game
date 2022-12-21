@@ -78,6 +78,7 @@ export default class Snake {
           if (element.x == this.tail[i].x && element.y == this.tail[i].y) {
             this.running = false;
             modal.classList.remove('hidden');
+
             restartBtn.addEventListener('click', () => {
               modal.classList.add('hidden');
               this.restart();

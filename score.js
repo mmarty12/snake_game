@@ -1,8 +1,11 @@
 export default class Score {
   constructor(scoreBlock, score) {
     score = 0;
+
     this.scoreBlock = document.querySelector(scoreBlock); //score display
+
     this.score = score;
+
     this.draw();
   }
 

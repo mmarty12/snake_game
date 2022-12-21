@@ -45,7 +45,7 @@ body {
 #button-again {
   border-radius: 10px;
   border-color: #f1c71e;
-  min-width: 190px;
+  min-width: 160px;
   height: 50px;
   background-color: black;
   font-size: 3vmin;
@@ -73,9 +73,31 @@ body {
   display: none; /* Hidden by default */
 }
 
+p {
+  position: absolute;
+  border-radius: 5px;
+  border-color: #947f24;
+  font-size: 1.8rem;
+  color: #d2be0d;
+  top: 33%;
+  right: 43rem;
+  padding: 15pt;
+  animation: 3s show ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #button-again {
   position: absolute;
   top: 50%;
-  right: 44%;
+  right: 43rem;
   cursor: pointer;
+  animation: 8s show ease;
 }
