@@ -18,15 +18,29 @@ class GamePlay {
   }
 
   draw() {
-    this.canvas.context.clearRect(
-      0,
-      0,
-      this.canvas.element.width,
-      this.canvas.element.height
-    );
+    this.canvas.context.clearRect(0, 0, this.canvas.element.width, this.canvas.element.height);
     this.snake.draw(this.canvas.context);
     this.berry.draw(this.canvas.context);
   }
 }
 
-new GamePlay(document.querySelector('.canvas'));
+function StartGame() {
+  let buttonStart = document.querySelector('#button-start');
+  let buttonAgain = document.querySelector('#button-again');
+  let gamemenu = document.querySelector('.game-menu');
+  let canvas = document.querySelector('.canvas');
+
+  buttonAgain.style.visibility = 'hidden';
+  gamemenu.style.visibility = 'hidden';
+  canvas.style.visibility = 'hidden';
+
+  buttonStart.addEventListener('click', () => {
+    buttonStart.style.visibility = 'hidden';
+    buttonAgain.style.visibility = 'visible';
+    gamemenu.style.visibility = 'visible';
+    canvas.style.visibility = 'visible';
+    new GamePlay(document.querySelector('.canvas'));
+  });
+}
+
+StartGame();

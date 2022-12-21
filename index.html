@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Snake_Game</title>
-</head>
-<body>
-   <script src="main.js" type="module"></script> 
-   <div id="game">
-    <div clas="game-menu">  
+  </head>
+  <body>
+    <script src="main.js" type="module"></script>
+    <div id="game">
+      <button id="button-start">start</button>
+
+      <div class="game-menu">
         <div class="game-score">
-            <span class="score">0000</span>
+          <span class="score">0000</span>
         </div>
+      </div>
+      <div class="canvas"></div>
+
+      <div class="modal hidden">
+        <button id="button-again">restart</button>
+      </div>
     </div>
-   <div class="canvas">
-   </div>
-</div>
-</body>
+  </body>
 </html>
